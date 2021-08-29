@@ -5,18 +5,17 @@
  */
 package GUI;
 
-/**
- *
- * @author Lenovo
- */
-public class LoginFrame extends javax.swing.JFrame {
+import connect.ConnectDatabase;
 
-    /**
-     * Creates new form LoginFrame
-     */
+
+class LoginFrame extends javax.swing.JFrame {
+
+	ConnectDatabase con;
     public LoginFrame() {
         initComponents();
         this.setLocationRelativeTo(null);
+        con.getConnection();
+        
     }
 
     /**
