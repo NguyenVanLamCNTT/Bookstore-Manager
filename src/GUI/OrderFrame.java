@@ -399,11 +399,11 @@ public class OrderFrame extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Mã đơn hàng", "Tên khách hàng", "Địa chỉ", "Số điện thoại", "Tên sản phẩm", "Số lượng", "Đơn giá", "Thành tiền", "Ngày đặt", "Ngày giao", "Thanh toán"
+                "Mã đơn hàng", "Tên khách hàng", "Địa chỉ", "Số điện thoại", "Tên sản phẩm", "Số lượng", "Đơn giá", "Thành tiền", "Ngày đặt", "Ngày giao", "Thanh toán", "Trạng thái"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {

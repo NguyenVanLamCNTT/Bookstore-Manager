@@ -66,6 +66,9 @@ public class SaleFrame extends javax.swing.JFrame {
         txtEmail = new javax.swing.JTextField();
         labelTenNV = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
+        btnTimKiem = new javax.swing.JButton();
+        txtTienNhanTuKH1 = new javax.swing.JTextField();
+        labelTenNV1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableBanHang = new javax.swing.JTable();
 
@@ -239,6 +242,24 @@ public class SaleFrame extends javax.swing.JFrame {
         labelTenNV.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelTenNV.setText("Họ tên nhân viên: ");
 
+        btnTimKiem.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnTimKiem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/search.png"))); // NOI18N
+        btnTimKiem.setText("Tìm");
+        btnTimKiem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTimKiemActionPerformed(evt);
+            }
+        });
+
+        txtTienNhanTuKH1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtTienNhanTuKH1ActionPerformed(evt);
+            }
+        });
+
+        labelTenNV1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        labelTenNV1.setText("Mã Hóa đơn");
+
         javax.swing.GroupLayout panelBanHangLayout = new javax.swing.GroupLayout(panelBanHang);
         panelBanHang.setLayout(panelBanHangLayout);
         panelBanHangLayout.setHorizontalGroup(
@@ -265,7 +286,7 @@ public class SaleFrame extends javax.swing.JFrame {
                         .addComponent(labelThanhTien)
                         .addGap(18, 18, 18)
                         .addComponent(txtThanhTien, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jSeparator2)
                             .addComponent(panelNhapKH, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -283,21 +304,12 @@ public class SaleFrame extends javax.swing.JFrame {
                         .addGap(645, 645, 645))
                     .addGroup(panelBanHangLayout.createSequentialGroup()
                         .addGap(376, 376, 376)
-                        .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelBanHangLayout.createSequentialGroup()
-                                .addComponent(labelTienNhanTuKH)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtTienNhanTuKH, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(132, 132, 132)
-                                .addComponent(labelTienDu)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(panelBanHangLayout.createSequentialGroup()
-                                .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btnXoa, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnLuu, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnInHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(244, 244, 244))))))
+                        .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnXoa, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnLuu, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnInHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(244, 244, 244))))
             .addGroup(panelBanHangLayout.createSequentialGroup()
                 .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelBanHangLayout.createSequentialGroup()
@@ -310,8 +322,24 @@ public class SaleFrame extends javax.swing.JFrame {
                         .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnSua, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnThemSP, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(labelTongTienHD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(panelBanHangLayout.createSequentialGroup()
+                                .addComponent(labelTongTienHD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(57, 57, 57)
+                                .addComponent(labelTienNhanTuKH)
+                                .addGap(18, 18, 18)
+                                .addComponent(txtTienNhanTuKH1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(19, 19, 19)
+                                .addComponent(labelTienDu)
+                                .addGap(297, 297, 297)
+                                .addComponent(btnTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelBanHangLayout.createSequentialGroup()
+                                        .addGap(33, 33, 33)
+                                        .addComponent(txtTienNhanTuKH, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(panelBanHangLayout.createSequentialGroup()
+                                        .addGap(78, 78, 78)
+                                        .addComponent(labelTenNV1)))))))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
         panelBanHangLayout.setVerticalGroup(
             panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -353,14 +381,17 @@ public class SaleFrame extends javax.swing.JFrame {
                     .addComponent(btnThanhToan)
                     .addComponent(btnHoaDonMoi)
                     .addComponent(btnInHoaDon))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
-                .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelTongTienHD, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(labelTienNhanTuKH)
-                        .addComponent(txtTienNhanTuKH, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(labelTienDu)))
-                .addGap(37, 37, 37))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addComponent(labelTenNV1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelTongTienHD)
+                    .addComponent(labelTienNhanTuKH)
+                    .addComponent(txtTienNhanTuKH, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(labelTienDu)
+                    .addComponent(btnTimKiem)
+                    .addComponent(txtTienNhanTuKH1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17))
         );
 
         tableBanHang.setModel(new javax.swing.table.DefaultTableModel(
@@ -368,11 +399,11 @@ public class SaleFrame extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Loại sản phẩm", "Tên sản phẩm", "Số lượng", "Tiền"
+                "Tên khách hàng", "Số điện thoại", "Loại sản phẩm", "Tên sản phẩm", "Số lượng", "Tiền"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -399,7 +430,7 @@ public class SaleFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(panelBanHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -434,6 +465,14 @@ public class SaleFrame extends javax.swing.JFrame {
     private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnSuaActionPerformed
+
+    private void btnTimKiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimKiemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTimKiemActionPerformed
+
+    private void txtTienNhanTuKH1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTienNhanTuKH1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtTienNhanTuKH1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -479,6 +518,7 @@ public class SaleFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnThanhToan;
     private javax.swing.JButton btnThemSP;
     private javax.swing.JButton btnThoat;
+    private javax.swing.JButton btnTimKiem;
     private javax.swing.JButton btnXoa;
     private javax.swing.JComboBox<String> cbLoaiSP;
     private javax.swing.JComboBox<String> cbTenSP;
@@ -497,6 +537,7 @@ public class SaleFrame extends javax.swing.JFrame {
     private javax.swing.JLabel labelSoLuong;
     private javax.swing.JLabel labelTenKH;
     private javax.swing.JLabel labelTenNV;
+    private javax.swing.JLabel labelTenNV1;
     private javax.swing.JLabel labelTenSP;
     private javax.swing.JLabel labelThanhTien;
     private javax.swing.JLabel labelTienDu;
@@ -513,5 +554,6 @@ public class SaleFrame extends javax.swing.JFrame {
     private javax.swing.JTextField txtTenKH;
     private javax.swing.JTextField txtThanhTien;
     private javax.swing.JTextField txtTienNhanTuKH;
+    private javax.swing.JTextField txtTienNhanTuKH1;
     // End of variables declaration//GEN-END:variables
 }

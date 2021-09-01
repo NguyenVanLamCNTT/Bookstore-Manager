@@ -389,7 +389,7 @@
                 <Column editable="false" title="S&#x1ed1; &#x111;i&#x1ec7;n tho&#x1ea1;i" type="java.lang.Object"/>
                 <Column editable="false" title="&#x110;&#x1ecb;a ch&#x1ec9;" type="java.lang.Object"/>
                 <Column editable="false" title="Email" type="java.lang.Object"/>
-                <Column editable="true" title="Ch&#x1ee9;c v&#x1ee5;" type="java.lang.Object"/>
+                <Column editable="false" title="Ch&#x1ee9;c v&#x1ee5;" type="java.lang.Object"/>
                 <Column editable="false" title="T&#xea;n t&#xe0;i kho&#x1ea3;n" type="java.lang.Object"/>
               </Table>
             </Property>
