@@ -9,12 +9,12 @@ package GUI;
  *
  * @author Lenovo
  */
-public class StatisticalFrame extends javax.swing.JFrame {
+public class ProductStatisticsFrame extends javax.swing.JFrame {
 
     /**
-     * Creates new form StatisticalFrame
+     * Creates new form ProductStatisticsFrame
      */
-    public StatisticalFrame() {
+    public ProductStatisticsFrame() {
         initComponents();
     }
 
@@ -27,10 +27,9 @@ public class StatisticalFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton2 = new javax.swing.JButton();
         panelThongKe = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
-        labelThongKe = new javax.swing.JLabel();
+        labelThongKeSP = new javax.swing.JLabel();
         btnIn = new javax.swing.JButton();
         labelNgayBatDau = new javax.swing.JLabel();
         dateNgayBatDau = new com.toedter.calendar.JDateChooser();
@@ -40,18 +39,14 @@ public class StatisticalFrame extends javax.swing.JFrame {
         btnThongKe = new javax.swing.JButton();
         btnTim = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tableThongKe = new javax.swing.JTable();
-
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/out.png"))); // NOI18N
-        jButton2.setText("Thoát");
+        tableQuanLySP = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Thông kê doanh thu");
 
         panelThongKe.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        labelThongKe.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
-        labelThongKe.setText("THỐNG KÊ DOANH THU");
+        labelThongKeSP.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        labelThongKeSP.setText("THỐNG KÊ SẢN PHẨM");
 
         btnIn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/printer.png"))); // NOI18N
         btnIn.setText("In thống kê");
@@ -65,8 +60,8 @@ public class StatisticalFrame extends javax.swing.JFrame {
         btnThoat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/out.png"))); // NOI18N
         btnThoat.setText("Thoát");
 
-        btnThongKe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/analytics-1.png"))); // NOI18N
-        btnThongKe.setText("Thống kê");
+        btnThongKe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/product-statistics-1.png"))); // NOI18N
+        btnThongKe.setText("Thống kê sản phẩm hết ");
 
         btnTim.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/search.png"))); // NOI18N
         btnTim.setText("Tìm");
@@ -85,18 +80,18 @@ public class StatisticalFrame extends javax.swing.JFrame {
                 .addComponent(labelNgayKetThuc)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(dateNgayKetThuc, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(90, 90, 90)
+                .addGap(36, 36, 36)
                 .addComponent(btnTim)
-                .addGap(25, 25, 25)
+                .addGap(18, 18, 18)
                 .addComponent(btnThongKe)
-                .addGap(45, 45, 45)
+                .addGap(29, 29, 29)
                 .addComponent(btnIn)
-                .addGap(180, 180, 180))
+                .addGap(257, 257, 257))
             .addGroup(panelThongKeLayout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(btnThoat)
-                .addGap(289, 289, 289)
-                .addComponent(labelThongKe)
+                .addGap(295, 295, 295)
+                .addComponent(labelThongKeSP)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelThongKeLayout.setVerticalGroup(
@@ -104,7 +99,7 @@ public class StatisticalFrame extends javax.swing.JFrame {
             .addGroup(panelThongKeLayout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addGroup(panelThongKeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(labelThongKe)
+                    .addComponent(labelThongKeSP)
                     .addComponent(btnThoat))
                 .addGap(20, 20, 20)
                 .addGroup(panelThongKeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -124,26 +119,26 @@ public class StatisticalFrame extends javax.swing.JFrame {
                                     .addComponent(dateNgayKetThuc, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addComponent(dateNgayBatDau, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelNgayBatDau))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
-        tableThongKe.setModel(new javax.swing.table.DefaultTableModel(
+        tableQuanLySP.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Mã Hóa đơn", "Tên nhân viên", "Ngày lập hóa đơn", "Tổng tiền hóa đơn"
+                "Loại sản phẩm", "Mã sản phẩm", "Tên sản phẩm", "Đơn giá", "Số lượng tồn", "Trạng thái", "Mã nhà sản xuất", "Tên tác giả", "Số trang", "Nhà xuất bản"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tableThongKe);
+        jScrollPane1.setViewportView(tableQuanLySP);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -152,9 +147,11 @@ public class StatisticalFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelThongKe, javax.swing.GroupLayout.PREFERRED_SIZE, 1271, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1271, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(panelThongKe, javax.swing.GroupLayout.PREFERRED_SIZE, 1271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -162,8 +159,8 @@ public class StatisticalFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(panelThongKe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -186,20 +183,20 @@ public class StatisticalFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(StatisticalFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProductStatisticsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(StatisticalFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProductStatisticsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(StatisticalFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProductStatisticsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(StatisticalFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProductStatisticsFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new StatisticalFrame().setVisible(true);
+                new ProductStatisticsFrame().setVisible(true);
             }
         });
     }
@@ -211,13 +208,12 @@ public class StatisticalFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnTim;
     private com.toedter.calendar.JDateChooser dateNgayBatDau;
     private com.toedter.calendar.JDateChooser dateNgayKetThuc;
-    private javax.swing.JButton jButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel labelNgayBatDau;
     private javax.swing.JLabel labelNgayKetThuc;
-    private javax.swing.JLabel labelThongKe;
+    private javax.swing.JLabel labelThongKeSP;
     private javax.swing.JPanel panelThongKe;
-    private javax.swing.JTable tableThongKe;
+    private javax.swing.JTable tableQuanLySP;
     // End of variables declaration//GEN-END:variables
 }

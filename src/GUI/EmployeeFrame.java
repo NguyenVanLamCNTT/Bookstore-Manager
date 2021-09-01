@@ -65,8 +65,8 @@ public class EmployeeFrame extends javax.swing.JFrame {
         panelQuanLyNV.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         panelQuanLyNV.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        labelQLNV.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        labelQLNV.setText("Quản Lý Nhân Viên");
+        labelQLNV.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        labelQLNV.setText("QUẢN LÝ NHÂN VIÊN");
 
         labelMaNV.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelMaNV.setText("Mã nhân viên");
@@ -144,7 +144,7 @@ public class EmployeeFrame extends javax.swing.JFrame {
                         .addGroup(panelQuanLyNVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelQuanLyNVLayout.createSequentialGroup()
                                 .addComponent(btnThoat)
-                                .addGap(398, 398, 398)
+                                .addGap(316, 316, 316)
                                 .addComponent(labelQLNV)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(jSeparator1))
@@ -204,14 +204,11 @@ public class EmployeeFrame extends javax.swing.JFrame {
         panelQuanLyNVLayout.setVerticalGroup(
             panelQuanLyNVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelQuanLyNVLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(panelQuanLyNVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelQuanLyNVLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(labelQLNV))
-                    .addGroup(panelQuanLyNVLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(btnThoat)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(btnThoat)
+                    .addComponent(labelQLNV, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelQuanLyNVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -280,7 +277,7 @@ public class EmployeeFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(panelQuanLyNV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

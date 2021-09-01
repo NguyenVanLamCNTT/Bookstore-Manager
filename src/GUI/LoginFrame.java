@@ -74,9 +74,9 @@ class LoginFrame extends javax.swing.JFrame {
         btnThoat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/multiply.png"))); // NOI18N
         btnThoat.setText("Thoát");
 
-        labelDangNhap.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        labelDangNhap.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         labelDangNhap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bookstore.png"))); // NOI18N
-        labelDangNhap.setText("Đăng nhập hệ thống");
+        labelDangNhap.setText("ĐĂNG NHẬP HỆ THỐNG");
 
         txtTenTK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

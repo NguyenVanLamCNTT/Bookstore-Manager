@@ -55,6 +55,8 @@ public class OrderFrame extends javax.swing.JFrame {
         labelSoLuong = new javax.swing.JLabel();
         txtThanhTien = new javax.swing.JTextField();
         labelThanhTien = new javax.swing.JLabel();
+        labelThanhToan = new javax.swing.JLabel();
+        cbThanhToan = new javax.swing.JComboBox<>();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         btnThemDH = new javax.swing.JButton();
         btnXoaDH = new javax.swing.JButton();
@@ -74,8 +76,8 @@ public class OrderFrame extends javax.swing.JFrame {
 
         panelQuanLyDH.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        labelQuanLyDH.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        labelQuanLyDH.setText("Quản Lý Đơn Hàng");
+        labelQuanLyDH.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        labelQuanLyDH.setText("QUẢN LÝ ĐƠN HÀNG");
 
         btnThoat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/out.png"))); // NOI18N
         btnThoat.setText("Thoát");
@@ -98,7 +100,7 @@ public class OrderFrame extends javax.swing.JFrame {
         labelNgayDat.setText("Ngày đặt");
 
         labelNgayGui.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        labelNgayGui.setText("Ngày gửi");
+        labelNgayGui.setText("Ngày giao");
 
         javax.swing.GroupLayout panelNhapKHLayout = new javax.swing.GroupLayout(panelNhapKH);
         panelNhapKH.setLayout(panelNhapKHLayout);
@@ -187,6 +189,16 @@ public class OrderFrame extends javax.swing.JFrame {
         labelThanhTien.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         labelThanhTien.setText("Thành tiền");
 
+        labelThanhToan.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        labelThanhToan.setText("Thanh toán");
+
+        cbThanhToan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tiền mặt", "Chuyển khoản" }));
+        cbThanhToan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbThanhToanActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelNhapSPLayout = new javax.swing.GroupLayout(panelNhapSP);
         panelNhapSP.setLayout(panelNhapSPLayout);
         panelNhapSPLayout.setHorizontalGroup(
@@ -214,6 +226,10 @@ public class OrderFrame extends javax.swing.JFrame {
                         .addContainerGap(25, Short.MAX_VALUE))
                     .addGroup(panelNhapSPLayout.createSequentialGroup()
                         .addComponent(txtThanhTien, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(labelThanhToan)
+                        .addGap(18, 18, 18)
+                        .addComponent(cbThanhToan, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         panelNhapSPLayout.setVerticalGroup(
@@ -239,7 +255,10 @@ public class OrderFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(panelNhapSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelThanhTien)
-                    .addComponent(txtThanhTien, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtThanhTien, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelNhapSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelThanhToan)
+                        .addComponent(cbThanhToan, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(30, 30, 30))
         );
 
@@ -380,11 +399,11 @@ public class OrderFrame extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Mã sản phẩm", "Số lượng", "Thành tiền"
+                "Mã đơn hàng", "Tên khách hàng", "Địa chỉ", "Số điện thoại", "Tên sản phẩm", "Số lượng", "Đơn giá", "Thành tiền", "Ngày đặt", "Ngày giao", "Thanh toán"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false
+                false, false, false, false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -424,6 +443,10 @@ public class OrderFrame extends javax.swing.JFrame {
     private void btnLuuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLuuActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnLuuActionPerformed
+
+    private void cbThanhToanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbThanhToanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbThanhToanActionPerformed
 
     /**
      * @param args the command line arguments
@@ -474,6 +497,7 @@ public class OrderFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbLoaiSP;
     private javax.swing.JComboBox<String> cbMaDH;
     private javax.swing.JComboBox<String> cbTenSP;
+    private javax.swing.JComboBox<String> cbThanhToan;
     private com.toedter.calendar.JDateChooser dateNgayDat;
     private com.toedter.calendar.JDateChooser dateNgayGui;
     private javax.swing.JLayeredPane jLayeredPane1;
@@ -492,6 +516,7 @@ public class OrderFrame extends javax.swing.JFrame {
     private javax.swing.JLabel labelTenKH;
     private javax.swing.JLabel labelTenSP;
     private javax.swing.JLabel labelThanhTien;
+    private javax.swing.JLabel labelThanhToan;
     private javax.swing.JPanel panelNhapKH;
     private javax.swing.JPanel panelNhapSP;
     private javax.swing.JPanel panelQuanLyDH;

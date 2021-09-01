@@ -47,8 +47,8 @@ public class TypeProductFrame extends javax.swing.JFrame {
 
         panelCapNhatLSP.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
-        labelCapNhatLSP.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        labelCapNhatLSP.setText("Cập Nhật Loại Sản Phẩm");
+        labelCapNhatLSP.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        labelCapNhatLSP.setText("CẬP NHẬT LOẠI SẢN PHẨM");
 
         btnThoat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/out.png"))); // NOI18N
         btnThoat.setText("Thoát");

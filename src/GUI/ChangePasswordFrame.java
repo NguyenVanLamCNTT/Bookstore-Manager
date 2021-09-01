@@ -82,9 +82,9 @@ public class ChangePasswordFrame extends javax.swing.JFrame {
         btnThoat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/multiply.png"))); // NOI18N
         btnThoat.setText("Thoát");
 
-        labelDoiMK.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        labelDoiMK.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
         labelDoiMK.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/bookstore.png"))); // NOI18N
-        labelDoiMK.setText("Đổi mật khẩu");
+        labelDoiMK.setText("ĐỔI MẬT KHẨU");
 
         txtTenTK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,11 +137,11 @@ public class ChangePasswordFrame extends javax.swing.JFrame {
                                     .addComponent(labelNhapLai)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addGroup(panelDoiMKLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(txtNhapLaiMKMoi, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(panelDoiMKLayout.createSequentialGroup()
                                             .addComponent(btnKetThuc, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(btnThoat, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addComponent(txtNhapLaiMKMoi, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                            .addComponent(btnThoat, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                             .addComponent(labelMKMoi))))
                 .addContainerGap(65, Short.MAX_VALUE))
         );
