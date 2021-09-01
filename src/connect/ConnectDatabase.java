@@ -21,8 +21,8 @@ public class ConnectDatabase {
 	public static void main(String[] args) {
 		Connection con = getConnection();
 		if( con != null) {
-			System.out.println("Sucess");
+			System.out.println("Connect Success");
 		}else
-			System.out.println("Error");
+			System.out.println("Connect Error");
 	}
 }
