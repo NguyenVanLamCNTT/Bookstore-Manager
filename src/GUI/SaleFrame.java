@@ -54,7 +54,7 @@ public class SaleFrame extends javax.swing.JFrame {
         labelTongTienHD = new javax.swing.JLabel();
         labelTienDu = new javax.swing.JLabel();
         labelTienNhanTuKH = new javax.swing.JLabel();
-        txtTienNhanTuKH = new javax.swing.JTextField();
+        txtMaTimKiem = new javax.swing.JTextField();
         panelNhapKH = new javax.swing.JPanel();
         labelTenKH = new javax.swing.JLabel();
         txtTenKH = new javax.swing.JTextField();
@@ -67,8 +67,8 @@ public class SaleFrame extends javax.swing.JFrame {
         labelTenNV = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         btnTimKiem = new javax.swing.JButton();
-        txtTienNhanTuKH1 = new javax.swing.JTextField();
-        labelTenNV1 = new javax.swing.JLabel();
+        txtTienNhanTuKH = new javax.swing.JTextField();
+        labelMaHD = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableBanHang = new javax.swing.JTable();
 
@@ -251,14 +251,14 @@ public class SaleFrame extends javax.swing.JFrame {
             }
         });
 
-        txtTienNhanTuKH1.addActionListener(new java.awt.event.ActionListener() {
+        txtTienNhanTuKH.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtTienNhanTuKH1ActionPerformed(evt);
+                txtTienNhanTuKHActionPerformed(evt);
             }
         });
 
-        labelTenNV1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        labelTenNV1.setText("Mã Hóa đơn");
+        labelMaHD.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        labelMaHD.setText("Mã Hóa đơn");
 
         javax.swing.GroupLayout panelBanHangLayout = new javax.swing.GroupLayout(panelBanHang);
         panelBanHang.setLayout(panelBanHangLayout);
@@ -327,7 +327,7 @@ public class SaleFrame extends javax.swing.JFrame {
                                 .addGap(57, 57, 57)
                                 .addComponent(labelTienNhanTuKH)
                                 .addGap(18, 18, 18)
-                                .addComponent(txtTienNhanTuKH1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtTienNhanTuKH, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(19, 19, 19)
                                 .addComponent(labelTienDu)
                                 .addGap(297, 297, 297)
@@ -335,10 +335,10 @@ public class SaleFrame extends javax.swing.JFrame {
                                 .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(panelBanHangLayout.createSequentialGroup()
                                         .addGap(33, 33, 33)
-                                        .addComponent(txtTienNhanTuKH, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(txtMaTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(panelBanHangLayout.createSequentialGroup()
                                         .addGap(78, 78, 78)
-                                        .addComponent(labelTenNV1)))))))
+                                        .addComponent(labelMaHD)))))))
                 .addContainerGap(84, Short.MAX_VALUE))
         );
         panelBanHangLayout.setVerticalGroup(
@@ -382,15 +382,15 @@ public class SaleFrame extends javax.swing.JFrame {
                     .addComponent(btnHoaDonMoi)
                     .addComponent(btnInHoaDon))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addComponent(labelTenNV1)
+                .addComponent(labelMaHD)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelTongTienHD)
                     .addComponent(labelTienNhanTuKH)
-                    .addComponent(txtTienNhanTuKH, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMaTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(labelTienDu)
                     .addComponent(btnTimKiem)
-                    .addComponent(txtTienNhanTuKH1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtTienNhanTuKH, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17))
         );
 
@@ -470,9 +470,9 @@ public class SaleFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnTimKiemActionPerformed
 
-    private void txtTienNhanTuKH1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTienNhanTuKH1ActionPerformed
+    private void txtTienNhanTuKHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTienNhanTuKHActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtTienNhanTuKH1ActionPerformed
+    }//GEN-LAST:event_txtTienNhanTuKHActionPerformed
 
     /**
      * @param args the command line arguments
@@ -533,11 +533,11 @@ public class SaleFrame extends javax.swing.JFrame {
     private javax.swing.JLabel labelDonGia;
     private javax.swing.JLabel labelEmail;
     private javax.swing.JLabel labelLoaiSanPham;
+    private javax.swing.JLabel labelMaHD;
     private javax.swing.JLabel labelSDT;
     private javax.swing.JLabel labelSoLuong;
     private javax.swing.JLabel labelTenKH;
     private javax.swing.JLabel labelTenNV;
-    private javax.swing.JLabel labelTenNV1;
     private javax.swing.JLabel labelTenSP;
     private javax.swing.JLabel labelThanhTien;
     private javax.swing.JLabel labelTienDu;
@@ -549,11 +549,11 @@ public class SaleFrame extends javax.swing.JFrame {
     private javax.swing.JTextField txtDiaChi;
     private javax.swing.JTextField txtDonGia;
     private javax.swing.JTextField txtEmail;
+    private javax.swing.JTextField txtMaTimKiem;
     private javax.swing.JTextField txtSDT;
     private javax.swing.JTextField txtSoLuong;
     private javax.swing.JTextField txtTenKH;
     private javax.swing.JTextField txtThanhTien;
     private javax.swing.JTextField txtTienNhanTuKH;
-    private javax.swing.JTextField txtTienNhanTuKH1;
     // End of variables declaration//GEN-END:variables
 }
