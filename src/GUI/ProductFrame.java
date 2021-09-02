@@ -5,6 +5,15 @@
  */
 package GUI;
 
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.swing.table.DefaultTableModel;
+
+import Beans.Sanpham;
+import DAO.DAO_Sanpham;
+import connect.ConnectDatabase;
+
 /**
  *
  * @author Lenovo
@@ -26,7 +35,6 @@ public class ProductFrame extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
         jFrame1 = new javax.swing.JFrame();
         jFrame2 = new javax.swing.JFrame();
         popupMenu1 = new java.awt.PopupMenu();
@@ -68,7 +76,8 @@ public class ProductFrame extends javax.swing.JFrame {
         cbLoaiSP = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableQuanLySP = new javax.swing.JTable();
-
+        model = new DefaultTableModel(new Object[]{"Loại sản phẩm", "Mã sản phẩm", "Tên sản phẩm", "Đơn giá", "Số lượng tồn", "Trạng thái", "Mã nhà sản xuất", "Tên tác giả", "Số trang", "Nhà xuất bản"},0 );
+        tableQuanLySP.setModel(model);
         javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
         jFrame1.getContentPane().setLayout(jFrame1Layout);
         jFrame1Layout.setHorizontalGroup(
@@ -343,22 +352,24 @@ public class ProductFrame extends javax.swing.JFrame {
                 .addGap(20, 20, 20))
         );
 
-        tableQuanLySP.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "Loại sản phẩm", "Mã sản phẩm", "Tên sản phẩm", "Đơn giá", "Số lượng tồn", "Trạng thái", "Mã nhà sản xuất", "Tên tác giả", "Số trang", "Nhà xuất bản"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+//        tableQuanLySP.setModel(model)
+//        tableQuanLySP.setModel(new javax.swing.table.DefaultTableModel(
+//            new Object [][] {
+//
+//            },
+//            new String [] {
+//                "Loại sản phẩm", "Mã sản phẩm", "Tên sản phẩm", "Đơn giá", "Số lượng tồn", "Trạng thái", "Mã nhà sản xuất", "Tên tác giả", "Số trang", "Nhà xuất bản"
+//            }
+//        ) {
+//            boolean[] canEdit = new boolean [] {
+//                false, false, false, false, false, false, false, false, false, false
+//            };
+//
+//            public boolean isCellEditable(int rowIndex, int columnIndex) {
+//                return canEdit [columnIndex];
+//            }
+//        });
+        
         jScrollPane1.setViewportView(tableQuanLySP);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -381,7 +392,12 @@ public class ProductFrame extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(20, Short.MAX_VALUE))
         );
-
+        try {
+			getProduct();
+		} catch (SQLException e) {
+		
+			e.printStackTrace();
+		}
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -409,9 +425,17 @@ public class ProductFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnTimActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    private void getProduct() throws SQLException {
+    	ConnectDatabase.getConnection();
+    	DAO_Sanpham dao_sanpham = new DAO_Sanpham();
+    	List<Sanpham> listprodut = dao_sanpham.getSanpham();
+    	for(Sanpham sp : listprodut) {
+    		String[] rowdata = {sp.getLoaiSp().getMaLoaiSp(),sp.getMaSanpham()+"",sp.getTenSanpham(),
+    				sp.getDongia()+"",sp.getSoluongton()+"",sp.getTrangthai(),sp.getNhaCC().getMaNCC()+"","","",""};
+    		model.addRow(rowdata);
+    	}
+    	tableQuanLySP.setModel(model);
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -486,5 +510,6 @@ public class ProductFrame extends javax.swing.JFrame {
     private javax.swing.JTextField txtTenSPTimKiem;
     private javax.swing.JTextField txtTenTG;
     private javax.swing.JTextField txtTrangThai;
+    private DefaultTableModel model;
     // End of variables declaration//GEN-END:variables
 }
