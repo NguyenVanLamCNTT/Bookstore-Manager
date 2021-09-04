@@ -25,6 +25,7 @@ public class ProductFrame extends javax.swing.JFrame {
      */
     public ProductFrame() {
         initComponents();
+        Disable();
     }
 
     /**
@@ -402,7 +403,8 @@ public class ProductFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThoatActionPerformed
-        // TODO add your handling code here:
+        new HomeFrame().setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnThoatActionPerformed
 
     private void btnSuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSuaActionPerformed
@@ -414,16 +416,25 @@ public class ProductFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLuuActionPerformed
 
     private void btnInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInActionPerformed
-        // TODO add your handling code here:
+    	
     }//GEN-LAST:event_btnInActionPerformed
 
     private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnThemActionPerformed
+    	txtDonGia.setEnabled(true);
+    	txtNXB.setEnabled(true);
+    	txtSoLuongTon.setEnabled(true);
+    	txtSoTrang.setEnabled(true);
+    	txtTenSP.setEnabled(true);
+    	txtTenTG.setEnabled(true);
+    	txtTrangThai.setEnabled(true);
+    	cbLoaiSP.setEnabled(true);
+    	cbMaNCC.setEnabled(true);
+    	btnLuu.setEnabled(true);
+    }
 
     private void btnTimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTimActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnTimActionPerformed
+    }
 
     private void getProduct() throws SQLException {
     	ConnectDatabase.getConnection();
@@ -435,6 +446,21 @@ public class ProductFrame extends javax.swing.JFrame {
     		model.addRow(rowdata);
     	}
     	tableQuanLySP.setModel(model);
+    }
+    private void Disable() {
+    	txtDonGia.setEnabled(false);
+    	txtMaSP.setEnabled(false);
+    	txtNXB.setEnabled(false);
+    	txtSoLuongTon.setEnabled(false);
+    	txtSoTrang.setEnabled(false);
+    	txtTenSP.setEnabled(false);
+    	txtTenSPTimKiem.setEnabled(false);
+    	txtTenTG.setEnabled(false);
+    	txtTrangThai.setEnabled(false);
+    	cbLoaiSP.setEnabled(false);
+    	cbMaNCC.setEnabled(false);
+    	btnLuu.setEnabled(false);
+    	btnXoa.setEnabled(false);
     }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
