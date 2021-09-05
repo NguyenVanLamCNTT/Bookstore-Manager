@@ -66,6 +66,7 @@ public class ProductFrame extends javax.swing.JFrame {
         labelTenSPTimKiem = new javax.swing.JLabel();
         labelLoaiSP = new javax.swing.JLabel();
         cbLoaiSP = new javax.swing.JComboBox<>();
+        btnQuayLai = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableQuanLySP = new javax.swing.JTable();
 
@@ -193,22 +194,37 @@ public class ProductFrame extends javax.swing.JFrame {
 
         cbLoaiSP.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        btnQuayLai.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnQuayLai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/reset.png"))); // NOI18N
+        btnQuayLai.setText("Quay lại");
+
         javax.swing.GroupLayout panelQuanLySPLayout = new javax.swing.GroupLayout(panelQuanLySP);
         panelQuanLySP.setLayout(panelQuanLySPLayout);
         panelQuanLySPLayout.setHorizontalGroup(
             panelQuanLySPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(panelQuanLySPLayout.createSequentialGroup()
+                .addGroup(panelQuanLySPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelQuanLySPLayout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(btnThoat)
+                        .addGap(310, 310, 310)
+                        .addComponent(labelQLSP))
+                    .addGroup(panelQuanLySPLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(btnChonAnh)))
+                .addContainerGap(416, Short.MAX_VALUE))
+            .addGroup(panelQuanLySPLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelQuanLySPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelQuanLySPLayout.createSequentialGroup()
+                .addGroup(panelQuanLySPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelQuanLySPLayout.createSequentialGroup()
                         .addComponent(btnThem, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(42, 42, 42)
                         .addComponent(btnXoa, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(39, 39, 39)
                         .addComponent(btnSua, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelQuanLySPLayout.createSequentialGroup()
+                    .addGroup(panelQuanLySPLayout.createSequentialGroup()
                         .addGroup(panelQuanLySPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(panelQuanLySPLayout.createSequentialGroup()
                                 .addComponent(labelHinhAnh, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -268,22 +284,12 @@ public class ProductFrame extends javax.swing.JFrame {
                                 .addComponent(btnTim, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(txtTenSPTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(25, 25, 25))))
-            .addGroup(panelQuanLySPLayout.createSequentialGroup()
-                .addGroup(panelQuanLySPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelQuanLySPLayout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(btnThoat)
-                        .addGap(310, 310, 310)
-                        .addComponent(labelQLSP))
-                    .addGroup(panelQuanLySPLayout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(btnChonAnh)))
-                .addContainerGap(416, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelQuanLySPLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(labelTenSPTimKiem)
-                .addGap(49, 49, 49))
+                        .addGap(25, 25, 25))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelQuanLySPLayout.createSequentialGroup()
+                        .addComponent(btnQuayLai, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelTenSPTimKiem)
+                        .addGap(49, 49, 49))))
         );
         panelQuanLySPLayout.setVerticalGroup(
             panelQuanLySPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -329,9 +335,15 @@ public class ProductFrame extends javax.swing.JFrame {
                 .addGroup(panelQuanLySPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelNXB)
                     .addComponent(txtNXB))
-                .addGap(55, 55, 55)
-                .addComponent(labelTenSPTimKiem)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelQuanLySPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelQuanLySPLayout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addComponent(labelTenSPTimKiem)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelQuanLySPLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnQuayLai)
+                        .addGap(20, 20, 20)))
                 .addGroup(panelQuanLySPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnXoa)
                     .addComponent(btnSua)
@@ -379,7 +391,7 @@ public class ProductFrame extends javax.swing.JFrame {
                 .addComponent(panelQuanLySP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
@@ -448,6 +460,7 @@ public class ProductFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnChonAnh;
     private javax.swing.JButton btnIn;
     private javax.swing.JButton btnLuu;
+    private javax.swing.JButton btnQuayLai;
     private javax.swing.JButton btnSua;
     private javax.swing.JButton btnThem;
     private javax.swing.JButton btnThoat;

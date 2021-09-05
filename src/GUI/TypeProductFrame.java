@@ -39,6 +39,7 @@ public class TypeProductFrame extends javax.swing.JFrame {
         btnXoa = new javax.swing.JButton();
         btnSua = new javax.swing.JButton();
         btnLuu = new javax.swing.JButton();
+        btnQuayLai = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableCapNhatLoaiSP = new javax.swing.JTable();
 
@@ -107,6 +108,10 @@ public class TypeProductFrame extends javax.swing.JFrame {
             }
         });
 
+        btnQuayLai.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnQuayLai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/reset.png"))); // NOI18N
+        btnQuayLai.setText("Quay lại");
+
         javax.swing.GroupLayout panelCapNhatLSPLayout = new javax.swing.GroupLayout(panelCapNhatLSP);
         panelCapNhatLSP.setLayout(panelCapNhatLSPLayout);
         panelCapNhatLSPLayout.setHorizontalGroup(
@@ -115,13 +120,15 @@ public class TypeProductFrame extends javax.swing.JFrame {
             .addGroup(panelCapNhatLSPLayout.createSequentialGroup()
                 .addGap(73, 73, 73)
                 .addComponent(btnThem, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(161, 161, 161)
+                .addGap(105, 105, 105)
+                .addComponent(btnQuayLai)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnXoa, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(158, 158, 158)
+                .addGap(100, 100, 100)
                 .addComponent(btnSua, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
+                .addGap(79, 79, 79)
                 .addComponent(btnLuu, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(119, 119, 119))
+                .addGap(69, 69, 69))
             .addGroup(panelCapNhatLSPLayout.createSequentialGroup()
                 .addGroup(panelCapNhatLSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelCapNhatLSPLayout.createSequentialGroup()
@@ -138,7 +145,7 @@ public class TypeProductFrame extends javax.swing.JFrame {
                         .addComponent(labelTenLoaiSP)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txtTenLoaiSP, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(253, Short.MAX_VALUE))
         );
         panelCapNhatLSPLayout.setVerticalGroup(
             panelCapNhatLSPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -166,7 +173,8 @@ public class TypeProductFrame extends javax.swing.JFrame {
                     .addComponent(btnThem)
                     .addComponent(btnXoa)
                     .addComponent(btnSua)
-                    .addComponent(btnLuu))
+                    .addComponent(btnLuu)
+                    .addComponent(btnQuayLai))
                 .addGap(75, 75, 75))
         );
 
@@ -273,6 +281,7 @@ public class TypeProductFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLuu;
+    private javax.swing.JButton btnQuayLai;
     private javax.swing.JButton btnSua;
     private javax.swing.JButton btnThem;
     private javax.swing.JButton btnThoat;

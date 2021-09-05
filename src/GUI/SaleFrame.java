@@ -69,8 +69,10 @@ public class SaleFrame extends javax.swing.JFrame {
         btnTimKiem = new javax.swing.JButton();
         txtTienNhanTuKH = new javax.swing.JTextField();
         labelMaHD = new javax.swing.JLabel();
+        btnQuayLai1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableBanHang = new javax.swing.JTable();
+        btnQuayLai = new javax.swing.JButton();
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel7.setText("Đơn giá");
@@ -260,6 +262,10 @@ public class SaleFrame extends javax.swing.JFrame {
         labelMaHD.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         labelMaHD.setText("Mã Hóa đơn");
 
+        btnQuayLai1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnQuayLai1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/reset.png"))); // NOI18N
+        btnQuayLai1.setText("Quay lại");
+
         javax.swing.GroupLayout panelBanHangLayout = new javax.swing.GroupLayout(panelBanHang);
         panelBanHang.setLayout(panelBanHangLayout);
         panelBanHangLayout.setHorizontalGroup(
@@ -303,13 +309,20 @@ public class SaleFrame extends javax.swing.JFrame {
                         .addComponent(labelTenNV)
                         .addGap(645, 645, 645))
                     .addGroup(panelBanHangLayout.createSequentialGroup()
-                        .addGap(376, 376, 376)
+                        .addGap(318, 318, 318)
                         .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnXoa, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnLuu, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnInHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(244, 244, 244))))
+                            .addComponent(btnLuu, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelTienNhanTuKH))
+                        .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelBanHangLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnInHoaDon, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(244, 244, 244))
+                            .addGroup(panelBanHangLayout.createSequentialGroup()
+                                .addGap(119, 119, 119)
+                                .addComponent(btnQuayLai1)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
             .addGroup(panelBanHangLayout.createSequentialGroup()
                 .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelBanHangLayout.createSequentialGroup()
@@ -324,13 +337,11 @@ public class SaleFrame extends javax.swing.JFrame {
                             .addComponent(btnThemSP, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panelBanHangLayout.createSequentialGroup()
                                 .addComponent(labelTongTienHD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(57, 57, 57)
-                                .addComponent(labelTienNhanTuKH)
-                                .addGap(18, 18, 18)
+                                .addGap(345, 345, 345)
                                 .addComponent(txtTienNhanTuKH, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(19, 19, 19)
+                                .addGap(18, 18, 18)
                                 .addComponent(labelTienDu)
-                                .addGap(297, 297, 297)
+                                .addGap(227, 227, 227)
                                 .addComponent(btnTimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(panelBanHangLayout.createSequentialGroup()
@@ -372,7 +383,8 @@ public class SaleFrame extends javax.swing.JFrame {
                         .addGap(90, 90, 90)
                         .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btnThemSP)
-                            .addComponent(btnLuu)))
+                            .addComponent(btnLuu)
+                            .addComponent(btnQuayLai1)))
                     .addComponent(panelNhapKH, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47)
                 .addGroup(panelBanHangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -412,6 +424,10 @@ public class SaleFrame extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tableBanHang);
 
+        btnQuayLai.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        btnQuayLai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/reset.png"))); // NOI18N
+        btnQuayLai.setText("Quay lại");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -424,6 +440,11 @@ public class SaleFrame extends javax.swing.JFrame {
                         .addComponent(panelBanHang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(btnQuayLai)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -433,6 +454,11 @@ public class SaleFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(btnQuayLai)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
@@ -514,6 +540,8 @@ public class SaleFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnHoaDonMoi;
     private javax.swing.JButton btnInHoaDon;
     private javax.swing.JButton btnLuu;
+    private javax.swing.JButton btnQuayLai;
+    private javax.swing.JButton btnQuayLai1;
     private javax.swing.JButton btnSua;
     private javax.swing.JButton btnThanhToan;
     private javax.swing.JButton btnThemSP;
