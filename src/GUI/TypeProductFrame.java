@@ -286,5 +286,6 @@ public class TypeProductFrame extends javax.swing.JFrame {
     private javax.swing.JTable tableCapNhatLoaiSP;
     private javax.swing.JTextField txtMaLoaiSP;
     private javax.swing.JTextField txtTenLoaiSP;
+   
     // End of variables declaration//GEN-END:variables
 }
